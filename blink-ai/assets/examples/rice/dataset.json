@@ -1,0 +1,90 @@
+{
+  "name": "Rice GWAS example",
+  "samples": 413,
+  "markers": 36901,
+  "chromosomes": 12,
+  "genotype_chunks": [
+    {
+      "path": "genotypes/001_rice_chr01a.vcf.gz",
+      "markers": 2717,
+      "chromosomes": {
+        "1": 2717
+      },
+      "sha256": "fbcf1507f5beddd9e8cae6d3d461e55af4173fcfdab4c0d77eb63ace31864ffe"
+    },
+    {
+      "path": "genotypes/002_rice_chr01b.vcf.gz",
+      "markers": 3748,
+      "chromosomes": {
+        "1": 3748
+      },
+      "sha256": "8da421ecd690130848a4a4ef3fe930a655fae96e6b6301ca2795427f232c861e"
+    },
+    {
+      "path": "genotypes/003_rice_chr02.vcf.gz",
+      "markers": 3872,
+      "chromosomes": {
+        "2": 3872
+      },
+      "sha256": "d271a3e01ebc6a49e1e0344ce5b648c179686964dc2c2f6e3d881b752a7acd75"
+    },
+    {
+      "path": "genotypes/004_rice_chr03.vcf.gz",
+      "markers": 4361,
+      "chromosomes": {
+        "3": 4361
+      },
+      "sha256": "07f71529ed065f8ae898add3a383f199c84d238e20a1445f1ac1587229161b1c"
+    },
+    {
+      "path": "genotypes/005_rice_chr04-07.vcf.gz",
+      "markers": 11047,
+      "chromosomes": {
+        "4": 2861,
+        "5": 2855,
+        "6": 3265,
+        "7": 2066
+      },
+      "sha256": "269bfb13f0e2f43be2ce5b449b5de38c579bdec1c6b3037b507ac85079ee9502"
+    },
+    {
+      "path": "genotypes/006_rice_chr08-12.vcf.gz",
+      "markers": 11156,
+      "chromosomes": {
+        "8": 2265,
+        "9": 1974,
+        "10": 1718,
+        "11": 3034,
+        "12": 2165
+      },
+      "sha256": "0a510feb69da0be3f1428dc5afb03f6a645040389847381ee2a6ff7e6797915c"
+    }
+  ],
+  "trait": "Faridpur_Aberdeen_phe",
+  "observed_phenotypes": 304,
+  "missing_phenotypes": 109,
+  "covariates": [
+    "PC1",
+    "PC2",
+    "PC3",
+    "PC4"
+  ],
+  "preparation": [
+    "Prepared from user-supplied rice demonstration data.",
+    "Sample IDs recovered from matching reference genotypes and PLINK individual IDs; all 413 assignments are unique.",
+    "Filenames and the tabular ID header standardized; VCF fileformat header added.",
+    "Supplied genotype values, allele labels, coordinates, trait values and covariate values retained.",
+    "The supplied chunks contain complete hard calls, including 660751 calls absent from the reference VCF; no additional imputation was performed."
+  ],
+  "files": {
+    "covariates.tsv": "19d2fc05076db1413c9f65dbba427e9b85bdb91562ac415a43013c342dc43259",
+    "genotypes/001_rice_chr01a.vcf.gz": "fbcf1507f5beddd9e8cae6d3d461e55af4173fcfdab4c0d77eb63ace31864ffe",
+    "genotypes/002_rice_chr01b.vcf.gz": "8da421ecd690130848a4a4ef3fe930a655fae96e6b6301ca2795427f232c861e",
+    "genotypes/003_rice_chr02.vcf.gz": "d271a3e01ebc6a49e1e0344ce5b648c179686964dc2c2f6e3d881b752a7acd75",
+    "genotypes/004_rice_chr03.vcf.gz": "07f71529ed065f8ae898add3a383f199c84d238e20a1445f1ac1587229161b1c",
+    "genotypes/005_rice_chr04-07.vcf.gz": "269bfb13f0e2f43be2ce5b449b5de38c579bdec1c6b3037b507ac85079ee9502",
+    "genotypes/006_rice_chr08-12.vcf.gz": "0a510feb69da0be3f1428dc5afb03f6a645040389847381ee2a6ff7e6797915c",
+    "phenotypes.tsv": "5e3cd6859d68461b6fa025c1140aa9b6602b1ed793b7c0ac6e6e777e7529f7d2",
+    "samples.tsv": "d3bfb664609c1301be7000a453ca7306c5ad0ed62074bff700fa64195d90a17d"
+  }
+}
