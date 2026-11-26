@@ -1,0 +1,4 @@
+2dbb02b3664edc790cd4634a056c74d772b725d7fc511ac405928d87dc85ef78  blink-ai-v0.2.4-macos-arm64-windows-x86_64.zip
+b7f9e8123aaa6e0442bd85a3176b563e4fa19f3fc839f5290341f93878836478  blink-ai-v0.2.5-macos-arm64-windows-x86_64.zip
+b645272c37bf586a673a4dc5403e721d8fc577e55658ffdde07a09c0e2c5bc32  blink-ai-v0.2.6-macos-arm64-windows-x86_64.zip
+3289ee55ef3e09c82ba3b4739671937787a9ec195543b0bb086dfc22627e9842  blink-ai-v0.2.7-macos-arm64-windows-x86_64.zip
