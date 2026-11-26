@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "package_version": "0.2.7",
+  "distribution": "release",
+  "engines": [
+    {
+      "system": "Darwin",
+      "architecture": "arm64",
+      "path": "bin/macos-arm64/blink",
+      "sha256": "97b9c1b2f6113d788942eb73f93f2ed0ffdde055da49692b2564ea080284f773",
+      "bytes": 210120,
+      "id": "macos-arm64-blink"
+    },
+    {
+      "system": "Windows",
+      "architecture": "x86_64",
+      "path": "bin/windows-x86_64/blink.exe",
+      "sha256": "4e6bbf5c4754815fb4336b9f5e4217b2f6c817837527806dea3586863f36de91",
+      "bytes": 319488,
+      "id": "windows-x86_64-blink"
+    }
+  ],
+  "conversion_tools": [
+    {
+      "system": "Darwin",
+      "architecture": "arm64",
+      "path": "bin/macos-arm64/blinkc-export",
+      "sha256": "b686e1eb60663b0c9db50b9b7fe8728f9de1b8a5504a197493f51a20d8b9f482",
+      "bytes": 72560,
+      "id": "macos-arm64-blinkc-export"
+    },
+    {
+      "system": "Windows",
+      "architecture": "x86_64",
+      "path": "bin/windows-x86_64/blinkc-export.exe",
+      "sha256": "a6bd303923363ecb252fd26ea0a4256bbfcdb42d83671a4ecef9dc9f0ab732fd",
+      "bytes": 176128,
+      "id": "windows-x86_64-blinkc-export"
+    }
+  ]
+}
