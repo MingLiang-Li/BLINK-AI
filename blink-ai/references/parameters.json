@@ -1,0 +1,118 @@
+{
+  "schema_version": "1",
+  "effective": [
+    {
+      "flag": "--file",
+      "config": "input.path",
+      "behavior": "Input prefix/directory; staged safely for the engine"
+    },
+    {
+      "flag": "--out",
+      "config": "output.run_dir",
+      "behavior": "Output prefix owned by this run"
+    },
+    {
+      "flag": "--hapmap/--vcf/--plink/--numeric/--binary",
+      "config": "input.format",
+      "behavior": "Import the selected genotype representation"
+    },
+    {
+      "flag": "--uvcf/--zvcf",
+      "config": "input.format",
+      "behavior": "VCF text/gzip; normalized in C before import"
+    },
+    {
+      "flag": "--multi",
+      "config": "input.layout",
+      "behavior": "C merges complete binary chunks before one genome-wide GWAS"
+    },
+    {
+      "flag": "--gwas",
+      "config": "run/analyze command",
+      "behavior": "Actual BLINK_c computation"
+    },
+    {
+      "flag": "--glm",
+      "config": "engine.model",
+      "behavior": "BLINK or GLM; GLM exits after the initial covariate-adjusted scan"
+    },
+    {
+      "flag": "--trait",
+      "config": "engine.trait / phenotype.traits",
+      "behavior": "1-based index; 0 all; named trait subsets map to native indices"
+    },
+    {
+      "flag": "--cycle_size",
+      "config": "engine.cycle_size",
+      "behavior": "Positive integer, initial SNPs per GWAS block. Default 2000. BLINK_c halves the effective block size and resumes at the current SNP on a cycle-buffer error."
+    },
+    {
+      "flag": "--max_loop",
+      "config": "engine.max_loop",
+      "behavior": "Positive integer; native default 10"
+    },
+    {
+      "flag": "--bin_size",
+      "config": "engine.bin_size",
+      "behavior": "1..30 positive values, in megabases; native default 1e-6 (1 bp); active core uses first bin map"
+    },
+    {
+      "flag": "--bin_selection",
+      "config": "engine.bin_selection",
+      "behavior": "null omits flag, preserving native initial cap 1e9; when set, 1..100 positive integers, only first value sets cap; no grid search"
+    },
+    {
+      "flag": "--prior",
+      "config": "engine.prior",
+      "behavior": "At most 100 post-QC 1-based indices or SNP IDs; forces initial selection evidence to 1e-100, not Bayesian priors"
+    },
+    {
+      "flag": "--cov",
+      "config": "engine.cov / covariates",
+      "behavior": "1 covariates each BLINK iteration (default), 2 initial scan only; intercept is automatic"
+    },
+    {
+      "flag": "--cutoff",
+      "config": "engine.cutoff",
+      "behavior": "Internal iterative candidate cutoff; distinct from report.alpha"
+    },
+    {
+      "flag": "--keep",
+      "config": "samples.keep",
+      "behavior": "Select samples by ID and retain matching metadata"
+    },
+    {
+      "flag": "--compress/--recode",
+      "config": "convert command",
+      "behavior": "Convert genotype formats while preserving metadata and hard calls"
+    },
+    {
+      "flag": "--noimp",
+      "config": "convert / qc.genotype_missing",
+      "behavior": "Conversion preserves missingness; GWAS rejects remaining missing calls; optional explicit C mode imputation"
+    }
+  ],
+  "unavailable": [
+    {
+      "flag": "--pca",
+      "reason": "Compile-time disabled in this build; supply precomputed PCs as covariates"
+    },
+    {
+      "flag": "--parallel",
+      "reason": "Recognized but main resets it to zero"
+    },
+    {
+      "flag": "--host/--device",
+      "reason": "Only consumed in disabled GPU branches; no working GPU path"
+    },
+    {
+      "flag": "--phe/--impute",
+      "reason": "Not parsed by this source; use phenotype.path and explicit missing policy"
+    }
+  ],
+  "limits": {
+    "bin_size": 30,
+    "bin_selection": 100,
+    "prior": 100
+  }
+}
