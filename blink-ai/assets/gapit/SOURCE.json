@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/jiabowang/GAPIT",
+  "commit": "b7b985fe83835089e1379e85284ff594cfdec0c6",
+  "version": "4.1.0",
+  "license_declared": "GPL (>= 2)",
+  "files": {
+    "GAPIT.Pruning.R": "d602959b44f40aa31b9c862f327ff4bdd0c75b0fe5b716ea368337111e5927f6",
+    "GAPIT.Phenotype.Simulation.R": "8ec14f03bc549068322cb17921a6d76464cda9d6e6ffe3bb255d13968d572aac",
+    "GAPIT.Manhattan.R": "3e861917f433c0190505ca1607bd287a68355942130fcafb4f5381c7ab860917",
+    "GAPIT.QQ.R": "b6b57e65d85a33238ff3bec19a8c4e57ff3ee91fbf6ff1a5f7a7e4fcab72c44f"
+  }
+}
