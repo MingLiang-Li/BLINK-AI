@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.zip -text
+*.gz -text
+*.exe -text
+blink-ai/bin/*/blink -text
+blink-ai/bin/*/blinkc-export -text
