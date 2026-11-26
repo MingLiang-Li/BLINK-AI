@@ -1,0 +1,71 @@
+{
+  "schema_version": "1",
+  "input": {
+    "format": "vcf_gz",
+    "layout": "single",
+    "path": "data/demo.vcf.gz",
+    "samples": null,
+    "alleles": null,
+    "allow_lossy": true,
+    "allow_synthetic_alleles": false
+  },
+  "phenotype": {
+    "path": null,
+    "id_column": null,
+    "traits": null,
+    "missing": "exclude_per_trait"
+  },
+  "covariates": {
+    "path": null,
+    "id_column": null,
+    "columns": null
+  },
+  "samples": {
+    "keep": null
+  },
+  "engine": {
+    "model": "BLINK",
+    "trait": 0,
+    "cycle_size": 2000,
+    "max_loop": 10,
+    "bin_size": [
+      1e-06
+    ],
+    "bin_selection": null,
+    "prior": [],
+    "cov": 1,
+    "cutoff": 0.01
+  },
+  "qc": {
+    "maf_min": 0.01,
+    "missing_max": 1.0,
+    "genotype_missing": "reject"
+  },
+  "simulation": {
+    "enabled": true,
+    "seed": 20261105,
+    "h2": 0.75,
+    "nqtn": 5,
+    "qtn_distribution": "normal",
+    "max_cells": 5000000
+  },
+  "report": {
+    "alpha": 0.05,
+    "multiple_testing": "bonferroni",
+    "correction_scope": "per_trait",
+    "plot_dpp": 50000,
+    "plot_seed": 20261105
+  },
+  "runtime": {
+    "rscript": null,
+    "timeout_seconds": 86400,
+    "project_root": null
+  },
+  "output": {
+    "run_dir": "demo-simulation"
+  },
+  "feedback": {
+    "user_request": null,
+    "user_experience": null
+  }
+}
