@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible BLINK-AI problem.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What were you trying to do?
+      description: Include your original request and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: What happened?
+      description: Describe the error or unexpected output and its impact.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: BLINK-AI version, operating system and architecture, host, Python version, and R version.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Provide the command or prompt, relevant configuration, and minimal input description.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Run evidence
+      description: Include the run ID, failed stage, and relevant logs or a local feedback report. Remove private data and paths before posting.
+  - type: textarea
+    id: attempts
+    attributes:
+      label: What have you tried?
+      description: Include any workaround and its verification result.

@@ -1,0 +1,18 @@
+name: Feature request
+description: Suggest a practical improvement to BLINK-AI.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow and current limitation
+      description: Explain the analysis task and the difficulty you encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the expected output and how you would check it.
+    validations:
+      required: true
