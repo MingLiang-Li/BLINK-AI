@@ -2,7 +2,7 @@
 
 # BLINK-AI
 
-**Genotype merging, format conversion, and large-scale GWAS — guided by your AI agent.**
+**AI-assisted genotype merging, format conversion, and large-scale GWAS.**
 
 For Codex, Claude Code, TRAE, and compatible hosts.
 
@@ -29,31 +29,39 @@ The agent needs access to local files and command execution, **Python 3.9+**, an
 
 BLINK_c handles conversion, merging, and GWAS. Bundled GAPIT functions handle phenotype simulation and plotting. [Format requirements](blink-ai/references/format-conversion.md) and [all model settings](blink-ai/references/parameters.md) are documented separately.
 
-## Use your own files
+## Quick start with example data
 
-Give the agent your genotype, phenotype, and covariate paths. Input data and generated outputs stay in your analysis project; this repository and skill package contain runtime resources only.
+Download [DEMO_DATA.zip](DEMO_DATA.zip) and extract it into your analysis project. The example data include six genotype chunks in VCF.gz format, phenotype data, and covariates. Give your AI agent the following prompts.
 
 **Merge genotype files**
 
-> Use BLINK-AI to merge the numbered genotype chunks in my genotypes folder into one BLINK dataset. Check sample identities and order, duplicate SNP IDs, and missing calls. Preserve the metadata, report the output location, and stop before GWAS.
+> Use BLINK-AI to merge the numbered genotype chunks in `vcf_split_iid` into one BLINK dataset. Check sample identities and order, duplicate SNP IDs, and missing calls. Preserve the metadata and report the output location.
 
 **Convert formats**
 
-> Use BLINK-AI to convert my genotypes.vcf.gz to PLINK binary. Preserve sample IDs, coordinates, alleles, and genotype calls, and save the conversion report and metadata sidecars.
+> Use BLINK-AI to convert the merged genotype dataset to PLINK binary and Numeric formats. Preserve sample IDs, SNP IDs, genomic positions, alleles, and genotype calls.
 
 **Run a genome-wide analysis**
 
-> Use BLINK-AI to analyze Height in my phenotypes.tsv with the genotype chunks in genotypes and PC1–PC3 from covariates.tsv. Check sample alignment, apply MAF ≥ 0.01, exclude missing phenotypes, and run one merged genome-wide BLINK model. Use an initial SNP block size of 2,000 with native memory adaptation. Save corrected results, GAPIT Manhattan and QQ plots, and the analysis report in runs/height.
+> Use BLINK-AI to perform GWAS for `Faridpur_Aberdeen_phe` in `phenotypes.txt` using the merged genotype dataset and PC1–PC4 from `covariates.cov`. Check sample alignment, apply MAF ≥ 0.01, and run a genome-wide BLINK model. Save corrected association results, GAPIT Manhattan and QQ plots, and the analysis report.
 
 Open the generated `report.html` or `report.md` to review your analysis.
+
+## Use your own files
+
+Give the agent your genotype, phenotype, and covariate paths, and describe your analysis requirements in natural language. Input data and generated outputs stay in your analysis project.
 
 ## Learn more
 
 [Detailed usage](blink-ai/references/usage.md) · [Configuration](blink-ai/references/configuration.md) · [Troubleshooting](blink-ai/references/diagnostics.md) · [Feedback](blink-ai/references/feedback.md)
 
-macOS workflows have been tested end to end. Windows binaries have architecture and integrity checks; Complete Windows Python/R workflow validation remains pending. The distribution includes native binaries without BLINK algorithm C source.
+macOS workflows have been tested end to end. Windows binaries have passed architecture and integrity checks; complete Windows Python/R workflow validation remains pending. The distribution includes native binaries without BLINK algorithm C source.
 
-**Written by:** Mingliang Li  
-**Designed by:** You Tang, Meng Huang, Zhiwu Zhang
+## Citation
 
-For BLINK analyses, cite [the BLINK publication](https://doi.org/10.1093/gigascience/giy154). Bundled GAPIT components retain their attribution and license; see [third-party notices](THIRD_PARTY_NOTICES.md).
+If you use BLINK-AI in your research, please cite the following publications:
+
+- [BLINK: a package for the next level of genome-wide association studies with both individuals and markers in the millions](https://doi.org/10.1093/gigascience/giy154).
+- [GWAS Procedures for Gene Mapping in Diverse Populations With Complex Structures](https://bio-protocol.org/en/bpdetail?id=5284&type=0).
+
+Bundled GAPIT components retain their original attribution and license; see [third-party notices](THIRD_PARTY_NOTICES.md).
