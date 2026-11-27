@@ -18,7 +18,7 @@ import struct
 import subprocess
 import sys
 
-VERSION = "0.2.8"
+VERSION = "0.2.9"
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 
 
