@@ -6,7 +6,7 @@
 
 For Codex, Claude Code, TRAE, and compatible hosts.
 
-[Download the skill](releases/blink-ai-v0.2.8-macos-arm64-windows-x86_64.zip) · [Usage guide](blink-ai/references/usage.md)
+[Download the skill](releases/blink-ai-v0.2.9-macos-arm64-windows-x86_64.zip) · [Usage guide](blink-ai/references/usage.md)
 
 </div>
 
@@ -51,7 +51,7 @@ Open the generated `report.html` or `report.md` to review your analysis.
 
 [Detailed usage](blink-ai/references/usage.md) · [Configuration](blink-ai/references/configuration.md) · [Troubleshooting](blink-ai/references/diagnostics.md) · [Feedback](blink-ai/references/feedback.md)
 
-macOS workflows have been tested end to end. Windows binaries have architecture and integrity checks; Windows runtime validation remains pending. The distribution includes native binaries without BLINK algorithm C source.
+macOS workflows have been tested end to end. Windows binaries have architecture and integrity checks; Complete Windows Python/R workflow validation remains pending. The distribution includes native binaries without BLINK algorithm C source.
 
 **Written by:** Mingliang Li  
 **Designed by:** You Tang, Meng Huang, Zhiwu Zhang
