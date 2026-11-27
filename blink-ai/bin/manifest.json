@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "package_version": "0.2.8",
+  "package_version": "0.2.9",
   "distribution": "release",
   "engines": [
     {
@@ -15,8 +15,8 @@
       "system": "Windows",
       "architecture": "x86_64",
       "path": "bin/windows-x86_64/blink.exe",
-      "sha256": "4e6bbf5c4754815fb4336b9f5e4217b2f6c817837527806dea3586863f36de91",
-      "bytes": 319488,
+      "sha256": "dd19f88f2f44b936a15edd9c94dc9f0620a455c0ee46a5c0cca591ef2eda51ee",
+      "bytes": 311808,
       "id": "windows-x86_64-blink"
     }
   ],
@@ -33,8 +33,8 @@
       "system": "Windows",
       "architecture": "x86_64",
       "path": "bin/windows-x86_64/blinkc-export.exe",
-      "sha256": "a6bd303923363ecb252fd26ea0a4256bbfcdb42d83671a4ecef9dc9f0ab732fd",
-      "bytes": 176128,
+      "sha256": "9160095799db72c22efcc9ce9757884524011fd0382a7789511ab206f64a2efa",
+      "bytes": 178688,
       "id": "windows-x86_64-blinkc-export"
     }
   ]
