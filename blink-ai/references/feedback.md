@@ -26,7 +26,7 @@ python3 "SKILL_DIR/scripts/blinkc_runner.py" feedback-create --project-root . --
 
 Omit `--run-dir` when the feedback has no associated analysis. The command prints the feedback ID and local report paths. The run snapshot includes versions, hashes, stage, commands, QC and result summaries when available, and references to logs. Preserve `context.json` with the analysis for the input identity and allele metadata.
 
-The standard `run` and conversion CLI capture execution failures automatically, including failures before a result table exists. Missing original user wording and experience remain explicitly unprovided. Set `feedback.user_request` and `feedback.user_experience` in an analysis configuration when that context is available. Set `runtime.project_root` when the configuration resides outside the user's project. Otherwise, the configuration directory is the default project root. The demo uses the current project directory.
+The standard `run` and conversion CLI capture execution failures automatically, including failures before a result table exists. Missing original user wording and experience remain explicitly unprovided. Set `feedback.user_request` and `feedback.user_experience` in an analysis configuration when that context is available. Set `runtime.project_root` when the configuration resides outside the user's project. Otherwise, the configuration directory is the default project root.
 
 ## Update handling status
 

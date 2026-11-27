@@ -31,7 +31,7 @@ If BLINK_c cannot reserve block workspace or the block exceeds the index range, 
 
 ## R environment and plotting
 
-The standard `run` and `demo` commands prepare the R dependencies automatically. Run `setup-environment --project-root .` to prepare them separately. Install R when Rscript is unavailable, or set `BLINK_AI_RSCRIPT` to an existing executable. The setup creates `.blink-ai/r-library/` under the project root, isolates packages by R version and platform, and installs missing `jsonlite` from CRAN. Existing compatible packages can be reused.
+The standard `run` command prepares the R dependencies automatically. Run `setup-environment --project-root .` to prepare them separately. Install R when Rscript is unavailable, or set `BLINK_AI_RSCRIPT` to an existing executable. The setup creates `.blink-ai/r-library/` under the project root, isolates packages by R version and platform, and installs missing `jsonlite` from CRAN. Existing compatible packages can be reused.
 
 Set `BLINK_AI_R_LIBRARY` to override the library base, `BLINK_AI_CRAN_MIRROR` to select a CRAN repository, or `BLINK_AI_INSTALL_R_PACKAGES=false` to disable dependency downloads. The setup command also supports `--no-install`. Inspect the resulting environment with `inspect-environment --profile gwas --project-root .`. Setup logs and the R environment record are saved locally.
 

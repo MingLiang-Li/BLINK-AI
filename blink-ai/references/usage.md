@@ -31,22 +31,6 @@ python3 "SKILL_DIR/scripts/blinkc_runner.py" inspect-environment --profile gwas 
 
 Setup installs missing `jsonlite` into `.blink-ai/r-library/`. GAPIT plotting and simulation functions are bundled. If discovery fails, set `BLINK_AI_RSCRIPT` to your Rscript executable. See [environment settings](configuration.md#r-environment-and-plotting) for offline setup and library overrides.
 
-## First analysis: the rice example
-
-Ask your agent:
-
-> Use BLINK-AI to run the bundled rice GWAS example. Read the full GWAS R template, check the environment and sample alignment, merge the six genotype chunks, use the supplied PC1–PC4 covariates, and generate the association tables, GAPIT Manhattan and QQ plots, and report in runs/rice-gwas.
-
-Or run:
-
-```bash
-python3 "SKILL_DIR/scripts/blinkc_runner.py" demo --output-dir runs/rice-gwas
-```
-
-The example contains 413 samples and 36,901 SNPs across 12 chromosomes. It uses the measured `Faridpur_Aberdeen_phe` trait and four supplied PCs. Missing phenotypes are excluded for that trait. The [dataset guide](example-data.md) describes preparation, QC, and expected outputs.
-
-Open `runs/rice-gwas/report.html` or `report.md`. A successful run has `"status": "completed"` in `manifest.json`, a complete marker table, and two nonempty plot PDFs. Use a new output directory for another run.
-
 ## Analyze your own data
 
 Tell the agent the genotype files, phenotype table, trait names, covariates, and output location:
@@ -128,13 +112,17 @@ VCF phase and annotations require explicit `--allow-lossy` before they can be dr
 
 ## Simulate and evaluate
 
-> Use BLINK-AI to run the bundled phenotype simulation example. Record the seed, causal SNPs, heritability settings, and discovery evaluation.
+Enable simulation only when requested and supply the user's genotype file. Omit `phenotype.path`, then set `simulation.enabled=true` and choose the seed, heritability, and number of causal SNPs. For example:
 
-```bash
-python3 "SKILL_DIR/scripts/blinkc_runner.py" demo --simulation --output-dir runs/simulation
+```json
+{
+  "input": {"format": "vcf_gz", "path": "genotypes.vcf.gz"},
+  "simulation": {"enabled": true, "seed": 20261105, "h2": 0.75, "nqtn": 10},
+  "output": {"run_dir": "runs/simulation"}
+}
 ```
 
-This uses a separate small genotype fixture and GAPIT phenotype simulation. It does not replace measured phenotypes silently. The run adds causal SNP, phenotype, effect component, and evaluation tables under `simulation/`. See [simulation settings](configuration.md#simulation).
+Save the configuration in the analysis project and run it with the standard `run --config` command. GAPIT generates phenotypes from that input; the workflow writes simulation data and evaluation outputs in the chosen run directory. See [simulation settings](configuration.md#simulation).
 
 ## Read and troubleshoot a run
 
