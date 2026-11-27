@@ -18,7 +18,7 @@ import struct
 import subprocess
 import sys
 
-VERSION = "0.2.7"
+VERSION = "0.2.8"
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -280,9 +280,6 @@ def main(argv=None):
     init.add_argument("--output",type=Path,required=True)
     run=sub.add_parser("run",help="Run canonical R template and validate the complete analysis")
     run.add_argument("--config",type=Path,required=True)
-    demo=sub.add_parser("demo",help="Run the bundled GWAS or simulation example in a new output directory")
-    demo.add_argument("--output-dir",type=Path,required=True)
-    demo.add_argument("--simulation",action="store_true")
     for stage in ("bootstrap","prepare","analyze","finalize","mark-failed","set-phase"):
         p=sub.add_parser(stage,help=argparse.SUPPRESS)
         p.add_argument("--config" if stage=="bootstrap" else "--run-dir",type=Path,required=True)
@@ -320,9 +317,6 @@ def main(argv=None):
             result = feedback.update(args.project_root, args.id, details)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
-    if args.command=="demo":
-        import analysis_pipeline
-        print(json.dumps(analysis_pipeline.demo(args.output_dir,args.simulation),ensure_ascii=False,indent=2));return 0
     if args.command == "parameters":
         import analysis_config
         print(json.dumps(analysis_config.catalogue(),ensure_ascii=False,indent=2));return 0

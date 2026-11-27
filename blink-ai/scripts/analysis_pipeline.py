@@ -10,7 +10,6 @@ import re
 import shutil
 import subprocess
 import sys
-import tempfile
 import time
 
 import analysis_config as contract
@@ -419,17 +418,3 @@ def run(config_path):
             except (OSError, ValueError) as feedback_error:
                 print("Cannot save local feedback: " + str(feedback_error), file=sys.stderr)
         raise
-
-
-def demo(output_dir, simulation=False):
-    """Resolve bundled example paths before creating a disposable user configuration."""
-    source=runner.SKILL_ROOT/"assets/examples"/("simulation.example.json" if simulation else "gwas.example.json")
-    config=read_json(source)
-    for group,key in (("input","path"),("input","samples"),("input","alleles"),("phenotype","path"),("covariates","path")):
-        value=config[group][key]
-        if value:config[group][key]=str((source.parent/value).resolve())
-    config["output"]["run_dir"]=str(Path(output_dir).resolve())
-    config["runtime"]["project_root"]=str(Path.cwd())
-    with tempfile.TemporaryDirectory(prefix="blink-ai-demo-") as temporary:
-        path=Path(temporary)/"analysis.json";runner.write_json(path,config)
-        return run(path)
