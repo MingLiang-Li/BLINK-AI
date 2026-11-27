@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# Canonical BLINK-AI GWAS template, v0.2.7.
+# Canonical BLINK-AI GWAS template, v0.2.8.
 # Read this entire template before adapting a user analysis. Edit JSON configuration;
 # preserve ID alignment, native GWAS, post-run output checks and reporting stages.
 # Usage: Rscript --vanilla BLINK_AI_GWAS_template.R config.json /absolute/skill/blink-ai
