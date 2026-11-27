@@ -1,5 +1,5 @@
 {
-  "version": "0.2.8",
+  "version": "0.2.9",
   "host": "generic",
   "platform": "macos-arm64-windows-x86_64",
   "files": {
@@ -7,14 +7,14 @@
     "blink-ai/bin/macos-arm64/blinkc-export": "b686e1eb60663b0c9db50b9b7fe8728f9de1b8a5504a197493f51a20d8b9f482",
     "blink-ai/SKILL.md": "6696880fb41b341671134c55d7309d924b1ab6f8f8d7b9ed90bc65f2faea6df0",
     "blink-ai/INSTALL.md": "c2e203b7e3820a5f792024b6b899a6234b09e38f3793f621d3f009dd88338c17",
-    "blink-ai/VERSION": "283571d2642fc7b3befd294f45d53b896a1d54d34c86235b13151192b380606a",
+    "blink-ai/VERSION": "2f2b333be8858cb384114251b668bb1c9e45a0bb8393600b7ad4093d0e8e72f6",
     "blink-ai/scripts/r_environment.py": "ff378c8ee05b5a4b7a0325440884f5ab3a6aae88fea8df734339c37214466eaa",
     "blink-ai/scripts/feedback.py": "bd4d3f58b1f1612d327ab29c78d151e78d5f5705cf72a9c17b02b32ba1e302d1",
     "blink-ai/scripts/setup_r_environment.R": "eca9cd68b8f532930f1eeb9f525bd6e798e3930ce91b739612a9d04fc638cfd0",
     "blink-ai/scripts/format_conversion.py": "1c58e56c188347a330466e9b7b1eb53e2fce33d701409cd29ad5a6675113497a",
     "blink-ai/scripts/analysis_config.py": "6224ebeb7ea3405e50cd2e98fd0ffa424e9e0635127c06f6c0697ce0b03a3d14",
     "blink-ai/scripts/analysis_pipeline.py": "4e3ccbc9108aee6e8ccf301669b42fb1b3f3b28db545106b480ed2adc76da3fb",
-    "blink-ai/scripts/blinkc_runner.py": "00ac0792a0668b073ad687b255a61289df2d36fc726c8f358b35844731cd9109",
+    "blink-ai/scripts/blinkc_runner.py": "5e53339b89cb20f7be916c6fd3a70712ba43f40551f941d0948c0eaf8e97394b",
     "blink-ai/scripts/gapit_adapter.R": "ae257aed59f837ee13d61e769f3a7dbb48f0d55e91d5b67e1715f460770911bb",
     "blink-ai/references/engine-contract.md": "f56fed434a0562a3f8b29b5efe0230f39c1c5a4b21acebb39bdab0221f04a6f0",
     "blink-ai/references/parameters.md": "26647995d8d2b695aa52a44ff2a3f965ae726efd9f63ab32e8d87090b54210a7",
@@ -32,11 +32,11 @@
     "blink-ai/assets/gapit/GAPIT.Phenotype.Simulation.R": "8ec14f03bc549068322cb17921a6d76464cda9d6e6ffe3bb255d13968d572aac",
     "blink-ai/assets/gapit/GAPIT.QQ.R": "b6b57e65d85a33238ff3bec19a8c4e57ff3ee91fbf6ff1a5f7a7e4fcab72c44f",
     "blink-ai/assets/gapit/GPL-2.txt": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
-    "blink-ai/assets/templates/BLINK_AI_GWAS_template.R": "2bff48e3bda098c5c28f0d235353d1cfdcf7578ab444b78600ebda1ca861dffa",
+    "blink-ai/assets/templates/BLINK_AI_GWAS_template.R": "47511c20b083012bcf8b848fa769d485ea62797dad6c82caa15e38dd9174e4d4",
     "blink-ai/evals/README.md": "3f134137117bf03c0486d9d1b5ef29bbf72b0f4cc58635e2d65b54931385c32c",
     "blink-ai/evals/questions.jsonl": "b325e251f2fe54ab3297d3894a674bc203fbee1553f8acc995bbc90ddac2d44d",
-    "blink-ai/bin/manifest.json": "3d14c127b27434942ecd5f03b178a9dd4902377ba1988fe8ab7e2824b117949c",
-    "blink-ai/bin/windows-x86_64/blink.exe": "4e6bbf5c4754815fb4336b9f5e4217b2f6c817837527806dea3586863f36de91",
-    "blink-ai/bin/windows-x86_64/blinkc-export.exe": "a6bd303923363ecb252fd26ea0a4256bbfcdb42d83671a4ecef9dc9f0ab732fd"
+    "blink-ai/bin/manifest.json": "4d90e02ff9d5389bd1bbcc693725b838a3ecc41f93bddff95a9463128982fdf3",
+    "blink-ai/bin/windows-x86_64/blink.exe": "dd19f88f2f44b936a15edd9c94dc9f0620a455c0ee46a5c0cca591ef2eda51ee",
+    "blink-ai/bin/windows-x86_64/blinkc-export.exe": "9160095799db72c22efcc9ce9757884524011fd0382a7789511ab206f64a2efa"
   }
 }
