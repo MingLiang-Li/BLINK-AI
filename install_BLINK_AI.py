@@ -80,7 +80,7 @@ def main():
     hosts = list(HOSTS) if args.host == "all" else [args.host]
     for host in hosts:
         install(host, args.project, payload, executables)
-    print('Start a new session in the target project and ask, "Use BLINK-AI to run the bundled GWAS example."')
+    print('Start a new session in the target project and ask, "Use BLINK-AI to check my environment and prepare an analysis for my data."')
     return 0
 
 
