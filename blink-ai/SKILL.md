@@ -7,7 +7,7 @@ description: Run and interpret genome-wide association studies with BLINK_c. Con
 
 Use this skill in a host that can run local Python, R, and native programs. See [installation](INSTALL.md) for supported platforms and prerequisites.
 
-For first use, read the [usage guide](references/usage.md). The default `demo` analyzes the bundled [rice dataset](references/example-data.md): six VCF.gz chunks, one measured trait, and four supplied PCs. `demo --simulation` uses a separate small genotype fixture.
+For first use, read the [usage guide](references/usage.md). Use the user's input files and store generated data, plots, and reports in the analysis project. The skill contains runtime resources only.
 
 ## Analysis workflow
 
@@ -32,14 +32,13 @@ Replace `SKILL_DIR` with this directory. On Windows, use `python` or `py -3` in 
 ```bash
 python3 "SKILL_DIR/scripts/blinkc_runner.py" setup-environment --project-root .
 python3 "SKILL_DIR/scripts/blinkc_runner.py" inspect-environment --profile gwas
-python3 "SKILL_DIR/scripts/blinkc_runner.py" demo --output-dir demo-gwas
 python3 "SKILL_DIR/scripts/blinkc_runner.py" init-config --output analysis.json
 python3 "SKILL_DIR/scripts/blinkc_runner.py" run --config analysis.json
 python3 "SKILL_DIR/scripts/blinkc_runner.py" parameters
 python3 "SKILL_DIR/scripts/blinkc_runner.py" search-knowledge "QQ plot"
 ```
 
-Add `--simulation` to the demo command for the simulated phenotype example. To convert genotype data, provide the source format, target format, input file or prefix, and a new output directory.
+For explicitly requested phenotype simulation, enable `simulation.enabled` in the user's configuration and supply their genotype input. To convert data, provide the source format, target format, input file or prefix, and a new output directory.
 
 ```bash
 python3 "SKILL_DIR/scripts/blinkc_runner.py" convert --from vcf --to plink --input genotypes.vcf --output-dir converted

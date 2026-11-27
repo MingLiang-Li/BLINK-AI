@@ -8,7 +8,7 @@ Copy the complete `blink-ai` directory into the skills directory in your project
 | Claude Code | `.claude/skills/blink-ai` |
 | TRAE | `.trae/skills/blink-ai` |
 
-Start a new session in that project and ask, “Use BLINK-AI to run the bundled GWAS example.”
+Start a new session in that project and ask, “Use BLINK-AI to check my environment and prepare an analysis for my data.”
 
 The dual-platform package includes native executables for Apple silicon macOS and x86-64 Windows. Install Python 3.9 or later and R. The setup command prepares a project-local R library, installs `jsonlite` when missing, and loads the bundled GAPIT plotting and simulation functions.
 
@@ -16,4 +16,4 @@ The dual-platform package includes native executables for Apple silicon macOS an
 python3 "SKILL_DIR/scripts/blinkc_runner.py" setup-environment --project-root .
 ```
 
-Set `BLINK_AI_RSCRIPT` or `runtime.rscript` to the Rscript executable if automatic discovery fails. See [commands](SKILL.md#commands) for the environment check and example.
+Set `BLINK_AI_RSCRIPT` or `runtime.rscript` to the Rscript executable if automatic discovery fails. See [commands](SKILL.md#commands) and the [usage guide](references/usage.md). Supply your input files from the analysis project.
